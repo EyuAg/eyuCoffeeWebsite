@@ -1,11 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EYU COFFEE SHOP - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-    
-</body>
-</html>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+
+                <a href="index.html" class="logo">
+                    <i class="fas fa-coffee"></i> EYU COFFEE SHOP</a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="menu.html" class="nav-link">Our Menu</a>
+                    <a href="shop.html" class="nav-link">Shop</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <div class="nav-socials">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page contact-page">
+        <section class="page-hero">
+            <div class="container">
+                <h1>Get In Touch With Us</h1>
+            </div>
+        </section>
+
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h2>Contact us via below form ...</h2>
+                <p class="contact-description">
+                    We’re here to help with any questions you may have about our services,
+                    products, or partnership opportunities. Whether you need assistance, want to
+                    share feedback, or simply wish to get in touch, our team is ready to support
+                    you. Reach out to us and we’ll respond as soon as possible.
+                </p>
+
+                <div class="contact-details">
+                    <div class="detail-item">
+                        <i data-lucide="mail" class="icon"></i>
+                        <p>support@EYUcoffeeshop.com</p>
+                    </div>
+                    <div class="detail-item">
+                        <i data-lucide="phone" class="icon"></i>
+                        <p>Phone: +251 95491449</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <input type="text" name="name" id="name" placeholder="Your Name (*)" required />
+                    <input type="email" name="email" id="email" placeholder="Your Email (*)" required />
+                </div>
+
+                <div class="form-row">
+                    <input type="tel" name="phone" id="phone" placeholder="Phone" />
+                    <select name="department" id="department">
+                        <option>Business Department</option>
+                        <option>Support</option>
+                        <option>Sales</option>
+                    </select>
+                </div>
+
+                <textarea name="question" id="question" placeholder="Your Question" rows="6"></textarea>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+
+
+        <section class="map-section">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15764.971908336911!2d38.789159749999996!3d8.9497441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b839de5be8c7f%3A0xf568b324cdf05fef!2zQm9sZSBCdWxidWxhIE1lZGhhbmVBbGVtIENodXJjaCB8IOGJpuGIjCDhiaHhiI3hiI3hiaHhiIsg4YmF4Yux4Yi1IOGImOGLteGIg-GKkuGKoOGIiOGInSDhiaThibDhiq3hiK3hiLXhibLhi6vhipU!5e0!3m2!1sen!2set!4v1765430729249!5m2!1sen!2set"
+                width="100%" height="650" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Office Information</h3>
+                    <div class="footer-info">
+                        <div class="info-item">
+                            <i data-lucide="map-pin" class="icon"></i>
+                            <p>Bole Bulbula,<br />Addis Ababa</p>
+                        </div>
+                        <div class="info-item">
+                            <i data-lucide="phone" class="icon"></i>
+                            <p>011 167 6767</p>
+                        </div>
+                        <div class="info-item">
+                            <i data-lucide="mail" class="icon"></i>
+                            <p>eyucoffee@gmail.com</p>
+                        </div>
+                        <div class="info-item">
+                            <i data-lucide="phone" class="icon"></i>
+                            <p>+251 954914946</p>
+                        </div>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Instagram">@eyucoffee_12</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>News</h3>
+                    <div class="news-items">
+                        <div class="news-item">
+                            <h4>A Place of Silence</h4>
+                            <p class="date">10 June 2024</p>
+                        </div>
+                        <div class="news-item">
+                            <h4>How to create a Logo like a Pro</h4>
+                            <p class="date">10 June 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Shortcuts</h3>
+                    <ul class="shortcuts">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#maps">Maps</a></li>
+                        <li><a href="#city-store">City Store</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#toolkits">Toolkits</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#employees">Employees</a></li>
+                        <li><a href="#clients">Clients</a></li>
+                        <li><a href="#teams">Teams</a></li>
+                        <li><a href="#benefits">Benefits</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="#consultation">Consultation</a></li>
+                        <li><a href="#publicity">Publicity</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Working Hours</h3>
+                    <p class="hours-text">Our support available to help you 24 hours a day, seven days a week.</p>
+                    <div class="hours">
+                        <div class="hour-row">
+                            <span>Monday to Friday:</span>
+                            <span>8:00 - 16:30</span>
+                        </div>
+                        <div class="hour-row">
+                            <span>Saturday:</span>
+                            <span>8:00 - 13:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 EYU COFFEE. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </main>
