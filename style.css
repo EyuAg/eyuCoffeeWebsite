@@ -748,3 +748,147 @@ menu {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: radial-gradient(#1c1f22, #0e0f10);
+  color: #fff;
+}
+
+/* Shop Container */
+.shop {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+}
+
+/* Header */
+.shop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shop-header h1 {
+  font-size: 32px;
+}
+
+.shop-header small {
+  color: #aaa;
+}
+
+.shop-controls select {
+  background: #1b1d1f;
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  margin-left: 10px;
+  border-radius: 6px;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 12px;
+  margin: 25px 0;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  background: #1a1c1e;
+  border: none;
+  color: #cfcfcf;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.filters button span {
+  color: #999;
+  margin-left: 4px;
+}
+
+.filters .active {
+  background: #c0854a;
+  color: #000;
+}
+
+/* Products Grid */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* Product Card */
+.product-card {
+  background: #17191b;
+  border-radius: 16px;
+  padding: 18px;
+  position: relative;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+/* Price */
+.price {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #2a2d31;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* Sale badge */
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #c0854a;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* Text */
+.product-card h3 {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.product-card small {
+  color: #aaa;
+}
+
+/* Button */
+.product-card button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 14px;
+  background: transparent;
+  border: 1px solid #444;
+  color: #c0854a;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background: #c0854a;
+  color: #000;
+}
