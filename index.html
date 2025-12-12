@@ -11,11 +11,18 @@
 
 <body>
     <header class="header">
-        <nav class="navbar">
+        <nav class="container navbar">
             <div class="nav-container">
+                <div class="brand">
+                    <div class="logo">E</div>
+                    <div>
+                        <a href="index.html" class="logo-text" style="font-weight:800; line-height:1">
+                            EYU COFFEE</a>
+                        <small style="color:var(--muted)">Roasters & Brewers</small>
+                    </div>
+                </div>
 
-                <a href="index.html" class="logo">
-                    <i class="fas fa-coffee"></i> EYU COFFEE SHOP</a>
+
                 <div class="nav-links">
                     <a href="index.html" class="nav-link active">Home</a>
                     <a href="menu.html" class="nav-link">Our Menu</a>
@@ -33,38 +40,76 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Welcome to EYU COFFEE SHOP</h1>
-                <p>Your daily dose of freshly brewed coffee and delightful treats.</p>
-                <a href="shop.html" class="cta-button">Shop Now</a>
+        <section class="container hero">
+            <div class="hero-media">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600&auto=format&fit=crop"
+                    alt="Cup of coffee with beans">
+                <div class="tagline">
+                    <span class="kicker">The Empty Coffee Cup Is</span>
+                    <h1 class="headline">Full Of <em>Hope</em></h1>
+                </div>
+                <div class="chip-group">
+                    <span class="chip">Freshly roasted</span>
+                    <span class="chip">Single origin</span>
+                    <span class="chip">Barista crafted</span>
+                    <span class="chip">Sustainable</span>
+                </div>
             </div>
         </section>
 
-        <section class="categories-section">
+        <section class="product-section">
             <div class="container">
-                <div class="categories-grid">
-                    <div class="category category-1">
-                        <h3>Turkish Coffee</h3>
-                        <p>Made of Copper and brass</p>
-                        <button>More Details >></button>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image"
+                            style="background-image: url('https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?auto=compress&cs=tinysrgb&w=600')">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="product-content">
+                            <h3>Turkish Coffee</h3>
+                            <p>Made of Copper and brass</p>
+                            <button>More Details >></button>
+                        </div>
                     </div>
-                    <div class="category category-2">
-                        <h3>Kaffe Fertig</h3>
-                        <p>About us</p>
-                        <button>More Details >></button>
 
+                    <div class="product-card">
+                        <div class="product-image"
+                            style="background-image: url('https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?auto=compress&cs=tinysrgb&w=600')">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="product-content">
+                            <h3>Kaffe Fertig</h3>
+                            <p>About us</p>
+                            <button>More Details >></button>
+
+                        </div>
                     </div>
-                    <div class="category category-3">
-                        <h3>Coffee & tea</h3>
-                        <p>Our Menu</p>
-                        <button>More Details >></button>
+
+                    <div class="product-card">
+                        <div class="product-image"
+                            style="background-image: url('https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?auto=compress&cs=tinysrgb&w=600')">
+                            <div class="image-overlay"></div>
+                            <div class="product-content">
+                                <h3>Coffee & tea</h3>
+                                <p>Our Menu</p>
+                                <button>More Details >></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="category category-4">
-                        <h3>Our news</h3>
-                        <p>Blog</p>
-                        <button>More Details >></button>
+
+                    <div class="product-card">
+                        <div class="product-image"
+                            style="background-image: url('https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?auto=compress&cs=tinysrgb&w=600')">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="product-content">
+                            <h3>Our news</h3>
+                            <p>Blog</p>
+                            <button>More Details >></button>
+                        </div>
                     </div>
+
+
                 </div>
             </div>
         </section>
@@ -82,32 +127,56 @@
             </div>
         </section>
 
-        <section class="offerings">
-            <div class="container">
-                <h2>What We Offer For You?</h2>
-                <div class="offerings-grid">
-                    <div class="offering-card">
-                        <div class="offering-icon">☕</div>
-                        <h3>Premium Coffee</h3>
-                        <p>High-quality arabica and robusta blends</p>
+        <section class="offering">
+            <div class="header-section">
+                <h1>What Do We Offer For You?</h1>
+                <p>Great coffee is important. But if you want loyal customers, creating a homely environment is crucial.
+                </p>
+            </div>
+
+
+
+            <div class="content">
+                <div class="left-image">
+                    <img src="https://i.pinimg.com/1200x/5d/e5/d2/5de5d20b5cbc47f08c8f64e749ff1c20.jpg"
+                        alt="Coffee Beans in Hands">
+                </div>
+
+                <div class="right-items">
+
+                    <div class="item">
+                        <h3>High Quality Coffee</h3>
+                        <p>Pick Up The Best Product</p>
                     </div>
-                    <div class="offering-card">
-                        <div class="offering-icon">🥐</div>
-                        <h3>Fresh Pastries</h3>
-                        <p>Baked fresh daily by our expert bakers</p>
+
+                    <div class="item">
+                        <h3>100% Pure Ceylon</h3>
+                        <p>The Single Origin Tea</p>
                     </div>
-                    <div class="offering-card">
-                        <div class="offering-icon">⚡</div>
-                        <h3>Quick Service</h3>
-                        <p>Fast and efficient service every time</p>
+
+                    <div class="item">
+                        <h3>Cake Services</h3>
+                        <p>Celebrations And Parties</p>
                     </div>
-                    <div class="offering-card">
-                        <div class="offering-icon">🛋️</div>
-                        <h3>Cozy Atmosphere</h3>
-                        <p>Perfect place to relax and work</p>
+
+                    <div class="item">
+                        <h3>Modern Coffee Makers</h3>
+                        <p>Comfortable And Faster</p>
                     </div>
+
+                    <div class="item">
+                        <h3>Grade 1 Coffee Beans</h3>
+                        <p>No Primary Defects, 0-3 Full Defects</p>
+                    </div>
+
+                    <div class="item">
+                        <h3>Coffee Chocolate</h3>
+                        <p>Perfectly Balanced Dark Chocolate</p>
+                    </div>
+
                 </div>
             </div>
+
         </section>
 
         <section class="statistics">
