@@ -122,9 +122,8 @@ header {
 .nav-link.active {
   color: var(--color-tan);
   border-bottom-color: var(--color-tan);
+
 }
-
-
 
 
 .nav-socials {
@@ -171,7 +170,7 @@ header {
 
 .hero-media {
   position: relative;
-  aspect-ratio: 16/10;
+  aspect-ratio: 20/10;
   border-radius: 22px;
   overflow: hidden;
   background: #111;
@@ -259,7 +258,7 @@ header {
 
 
 
-/* Product Grid */
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -269,7 +268,7 @@ header {
     
 }
 
-/* Product Card */
+
 .product-card {
     position: relative;
     overflow: hidden;
@@ -284,7 +283,7 @@ header {
     transform: translateY(-5px);
 }
 
-/* Product Image */
+
 .product-image {
     position: absolute;
     inset: 0;
@@ -297,14 +296,14 @@ header {
     transform: scale(1.1);
 }
 
-/* Image Overlay */
+
 .image-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5), transparent);
 }
 
-/* Product Content */
+
 .product-content {
     position: absolute;
     bottom: 0;
@@ -370,7 +369,7 @@ button:hover {
 }
 
 .about-text {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   color: var(--color-text-muted);
   line-height: 1.8;
@@ -407,8 +406,9 @@ button:hover {
 }
 
 .left-image img {
-    width: 350px;
+    width: 390px;
     border-radius: 8px;
+    box-shadow: var(--shadow);
 }
 
 .right-items {
@@ -432,10 +432,10 @@ button:hover {
 
 
 .statistics {
-
+  border-top: 1px solid var(--color-border);
+  margin-top: 50px;
   padding: 60px 20px;
   border-bottom: 1px solid var(--color-border);
-  
   background-size: cover;
 }
  
@@ -477,6 +477,7 @@ button:hover {
   color: var(--color-tan);
   text-align: center;
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .partners-grid {
@@ -650,7 +651,7 @@ button:hover {
 
 
 /* ===== MENU SECTION ===== */
-menu {
+.menu {
   max-width: 1200px;
   margin: auto;
   padding: 80px 20px;
@@ -754,13 +755,7 @@ menu {
 }
 
 
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
+/* ===== SHOP PAGE ===== */
 
 body {
   background: radial-gradient(#1c1f22, #0e0f10);
