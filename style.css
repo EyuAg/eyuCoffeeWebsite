@@ -471,10 +471,6 @@ button:hover {
 }
 
 
-.partners {
-  padding: 60px 20px;
-  border-bottom: 1px solid var(--color-border);
-}
 
 .partners h2 {
   font-size: 36px;
@@ -511,7 +507,7 @@ button:hover {
 .footer {
     background: 
         linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-        url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop') 
+        url('Images_Coffee/Footer.jpg') 
         center/cover no-repeat;
     border-top: 1px solid var(--color-border);
     margin-top: 60px;
@@ -672,12 +668,12 @@ menu {
 }
 
 .menu-header-coffee {
-    background-image: url("f4b468c720a97521602be6095de1abec-Picsart-AiImageEnhancer.jpg");
+    background-image: url("Images_Coffee/coffee_menu.jpg");
 
 }
 
 .menu-header-cake {
-    background-image: url("cae3bc13873a2f2d26095a8a1524609f.jpg");
+    background-image: url("Images_Coffee/cake_Menu.jpg");
 }
 
 .menu-header::before {
