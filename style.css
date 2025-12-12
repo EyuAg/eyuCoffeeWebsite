@@ -148,6 +148,38 @@ header {
 }
 
 
+@media (max-width: 768px) {
+  .nav-container {
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    display: none; 
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(15, 15, 16, 0.95);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .nav-socials {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+    color: var(--color-tan);
+  }
+}
+
 
 /* Hero Section */
 .hero {
@@ -260,9 +292,10 @@ header {
 
 
 .product-grid {
-    display: grid;
+    display: flex;
+    justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 30px;
+    gap: 75px;
     padding: 20px 0;
 
     
@@ -315,7 +348,7 @@ header {
     border-bottom: 2px solid transparent;
 }
 
-/* Product Title */
+
 .product-title {
     font-family: 'Georgia', 'Times New Roman', serif;
     font-size: 1.8rem;
@@ -324,7 +357,7 @@ header {
     letter-spacing: 0.5px;
 }
 
-/* Product Price */
+
 .product-descriprion {
     font-size: 1rem;
     opacity: 0.9;
@@ -334,7 +367,7 @@ header {
   
 }
 
-/* Add to Cart Button */
+
 button {
     background: white;
     color: black;
@@ -357,6 +390,7 @@ button:hover {
 
 
 .about-preview {
+  border-top: 1px solid transparent;
   padding: 60px 20px;
   text-align: center;
   border-bottom: 1px solid var(--color-border);
@@ -369,7 +403,7 @@ button:hover {
 }
 
 .about-text {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   color: var(--color-text-muted);
   line-height: 1.8;
@@ -439,16 +473,21 @@ button:hover {
   background-size: cover;
 }
  
-
-
-
 .statistics h2 {
   font-size: 36px;
   color: var(--color-tan);
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 5px;
 }
 
+.skills-subtitle {
+  display: flex;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 16px;
+  margin-bottom: 50px;
+
+}
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -714,17 +753,6 @@ button:hover {
   position: relative;
 }
 
-.badge {
-  position: absolute;
-  left: 0;
-  top: -12px;
-  background: #c28b53;
-  padding: 3px 10px;
-  font-size: 11px;
-  border-radius: 3px;
-  font-weight: 600;
-}
-
 .title {
   display: flex;
   align-items: center;
@@ -753,7 +781,6 @@ button:hover {
     grid-template-columns: 1fr;
   }
 }
-
 
 /* ===== SHOP PAGE ===== */
 
@@ -893,13 +920,6 @@ body {
 }
 
 /* ===== CONTACT PAGE ===== */
-.contact-page {
-  background-color: var(--color-dark-bg);
-}
-
-.hero-content{
-  align-items: center;
-}
 
 .contact-container {
   display: grid;
@@ -1000,6 +1020,8 @@ body {
 }
 
 .map-section {
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: 500px;
   overflow: hidden;
