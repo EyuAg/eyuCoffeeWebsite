@@ -278,5 +278,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // 5. ENHANCE MENU ITEM CLICKS TO ADD TO CART
+    menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const titleElement = this.querySelector('.title');
+            const itemName = titleElement.textContent.split('ETB')[0].trim();
+            const priceText = titleElement.querySelector('.price').textContent;
+            const price = parseInt(priceText);
+            
+            addToCart(itemName, price);
+        });
+    });
+    
+    // 6. FOOTER SOCIAL MEDIA INTERACTION
+    const socialIcons = document.querySelectorAll('.nav-socials a, .social-icons a');
+    socialIcons.forEach(icon => {
+        icon.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.2)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+        
+        icon.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+        
+        icon.addEventListener('click', function(e) {
+            e.preventDefault();
+            const platform = this.getAttribute('aria-label') || 'social media';
+            showToast(`Opening ${platform}... (demo)`);
+        });
+    });
+    
     
 });
