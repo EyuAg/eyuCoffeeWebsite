@@ -1087,7 +1087,6 @@ body {
 }
 
 #priceRange {
-    -webkit-appearance: none;
     height: 8px;
     border-radius: 4px;
     background: #ddd;
