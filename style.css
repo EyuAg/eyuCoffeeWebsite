@@ -1056,3 +1056,26 @@ body {
     height: 300px;
   }
 }
+
+
+/* Menu item hover effects */
+.menu-item {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Check icon animation */
+.fa-circle-check {
+    transition: color 0.3s ease;
+}
+
+.fa-solid.fa-circle-check {
+    color: var(--primary);
+}
+
+
