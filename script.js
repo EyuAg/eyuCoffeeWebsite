@@ -309,5 +309,99 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // 7. THEME TOGGLE (LIGHT/DARK MODE)
+    if (window.location.pathname.includes('menu.html')) {
+        const themeToggle = document.createElement('button');
+        themeToggle.id = 'theme-toggle';
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        themeToggle.style.position = 'fixed';
+        themeToggle.style.top = '100px';
+        themeToggle.style.right = '30px';
+        themeToggle.style.backgroundColor = 'var(--primary)';
+        themeToggle.style.color = 'white';
+        themeToggle.style.border = 'none';
+        themeToggle.style.borderRadius = '50%';
+        themeToggle.style.width = '50px';
+        themeToggle.style.height = '50px';
+        themeToggle.style.fontSize = '18px';
+        themeToggle.style.cursor = 'pointer';
+        themeToggle.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+        themeToggle.style.zIndex = '999';
+        themeToggle.style.display = 'flex';
+        themeToggle.style.alignItems = 'center';
+        themeToggle.style.justifyContent = 'center';
+        
+        document.body.appendChild(themeToggle);
+        
+        let darkMode = false;
+        
+        themeToggle.addEventListener('click', function() {
+            darkMode = !darkMode;
+            
+            if (darkMode) {
+                document.body.style.backgroundColor = '#1a1a1a';
+                document.body.style.color = '#f0f0f0';
+                document.querySelectorAll('.menu-item').forEach(item => {
+                    item.style.backgroundColor = '#2a2a2a';
+                    item.style.color = '#f0f0f0';
+                });
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                themeToggle.style.backgroundColor = '#f0c040';
+                themeToggle.style.color = '#333';
+            } else {
+                document.body.style.backgroundColor = '';
+                document.body.style.color = '';
+                document.querySelectorAll('.menu-item').forEach(item => {
+                    item.style.backgroundColor = '';
+                    item.style.color = '';
+                });
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                themeToggle.style.backgroundColor = 'var(--primary)';
+                themeToggle.style.color = 'white';
+            }
+        });
+    }
     
+    // 8. LOADING ANIMATION
+    const loadingScreen = document.createElement('div');
+    loadingScreen.id = 'loading-screen';
+    loadingScreen.style.position = 'fixed';
+    loadingScreen.style.top = '0';
+    loadingScreen.style.left = '0';
+    loadingScreen.style.width = '100%';
+    loadingScreen.style.height = '100%';
+    loadingScreen.style.backgroundColor = 'white';
+    loadingScreen.style.zIndex = '9999';
+    loadingScreen.style.display = 'flex';
+    loadingScreen.style.justifyContent = 'center';
+    loadingScreen.style.alignItems = 'center';
+    loadingScreen.style.flexDirection = 'column';
+    
+    loadingScreen.innerHTML = `
+        <div style="width: 60px; height: 60px; border: 5px solid #f3f3f3; border-top: 5px solid var(--primary); border-radius: 50%; animation: spin 1s linear infinite;"></div>
+        <p style="margin-top: 20px; color: var(--primary); font-weight: bold;">EYU COFFEE</p>
+    `;
+    
+    // Add spinner animation
+    const spinStyle = document.createElement('style');
+    spinStyle.textContent = `
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    `;
+    document.head.appendChild(spinStyle);
+    
+    document.body.prepend(loadingScreen);
+    
+    // Hide loading screen after page loads
+    setTimeout(() => {
+        loadingScreen.style.opacity = '0';
+        loadingScreen.style.transition = 'opacity 0.5s ease';
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+        }, 500);
+    }, 1000);
+    
+    console.log('JavaScript functionality loaded successfully!');
 });
