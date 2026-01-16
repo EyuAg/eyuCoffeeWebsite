@@ -95,5 +95,46 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000);
     }
     
+    // 3. PRICE FILTER FOR MENU (if on menu page)
+    if (window.location.pathname.includes('menu.html')) {
+        const priceFilterContainer = document.createElement('div');
+        priceFilterContainer.className = 'price-filter';
+        priceFilterContainer.innerHTML = `
+            <div style="text-align: center; margin: 30px 0;">
+                <label for="priceRange" style="display: block; margin-bottom: 10px; font-weight: bold; color: var(--primary);">
+                    Filter by Price: <span id="priceValue">All Items</span>
+                </label>
+                <input type="range" id="priceRange" min="70" max="250" value="250" style="width: 80%; max-width: 400px;">
+            </div>
+        `;
+        
+        // Insert after menu header
+        const firstMenuHeader = document.querySelector('.menu-header');
+        if (firstMenuHeader) {
+            firstMenuHeader.parentNode.insertBefore(priceFilterContainer, firstMenuHeader.nextSibling);
+            
+            const priceRange = document.getElementById('priceRange');
+            const priceValue = document.getElementById('priceValue');
+            
+            priceRange.addEventListener('input', function() {
+                const maxPrice = parseInt(this.value);
+                priceValue.textContent = `Under ${maxPrice} ETB`;
+                
+                // Filter menu items
+                menuItems.forEach(item => {
+                    const priceText = item.querySelector('.price').textContent;
+                    const itemPrice = parseInt(priceText);
+                    
+                    if (itemPrice <= maxPrice) {
+                        item.style.display = 'block';
+                        item.style.opacity = '1';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        }
+    }
+    
     
 });
